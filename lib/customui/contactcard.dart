@@ -5,13 +5,13 @@ import 'package:flutter_svg/parser.dart';
 import 'package:whatsapp/model/chatmodel.dart';
 
 class ContactCard extends StatelessWidget {
-  ContactCard({Key? key, required this.contact}) : super(key: key);
+  const ContactCard({Key? key, required this.contact}) : super(key: key);
   final ChatModel contact;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        leading: Container(
+        leading: SizedBox(
           height: 50,
           width: 50,
           child: Stack(
@@ -48,7 +48,7 @@ class ContactCard extends StatelessWidget {
             style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         subtitle: Text(
           contact.status,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 13,
           ),
         ));

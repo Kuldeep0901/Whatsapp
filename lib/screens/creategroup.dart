@@ -6,7 +6,7 @@ import 'package:whatsapp/customui/contactcard.dart';
 import 'package:whatsapp/model/chatmodel.dart';
 
 class CreateGroup extends StatefulWidget {
-  CreateGroup({Key? key}) : super(key: key);
+  const CreateGroup({Key? key}) : super(key: key);
 
   @override
   _CreateGroupState createState() => _CreateGroupState();
@@ -97,11 +97,11 @@ class _CreateGroupState extends State<CreateGroup> {
             crossAxisAlignment: CrossAxisAlignment.start,
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              Text(
+              const Text(
                 "New Group",
                 style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
               ),
-              Text(
+              const Text(
                 "Add Participants",
                 style: TextStyle(fontSize: 13),
               )
@@ -121,7 +121,7 @@ class _CreateGroupState extends State<CreateGroup> {
             itemBuilder: (context, index) {
               if (index == 0) {
                 return Container(
-                  height: groupmember.length > 0 ? 90 : 10,
+                  height: groupmember.isNotEmpty ? 90 : 10,
                 );
               }
               return InkWell(
@@ -138,7 +138,7 @@ class _CreateGroupState extends State<CreateGroup> {
                   },
                   child: ContactCard(contact: contacts[index - 1]));
             }),
-        groupmember.length > 0
+        groupmember.isNotEmpty
             ? Column(
                 children: [
                   Container(
@@ -162,7 +162,7 @@ class _CreateGroupState extends State<CreateGroup> {
                           }
                         },
                       )),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   )
                 ],

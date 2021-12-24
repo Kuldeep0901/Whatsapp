@@ -39,7 +39,7 @@ class ReplyCard extends StatelessWidget {
                 bottom: 4,
                 right: 10,
                 child: Text(
-                  "20:58",
+                  time,
                   style: TextStyle(fontSize: 13, color: Colors.grey[600]),
                 ),
               ),

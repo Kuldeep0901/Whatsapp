@@ -8,8 +8,6 @@ class AvatarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Padding:
-    const EdgeInsets.symmetric(horizontal: 8, vertical: 2);
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -44,7 +42,7 @@ class AvatarCard extends StatelessWidget {
           height: 2,
         ),
         Text(contact.name,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 12,
             ))
       ],

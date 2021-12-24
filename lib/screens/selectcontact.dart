@@ -93,7 +93,7 @@ class _SelectContactState extends State<SelectContact> {
           title: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               Text(
                 "Select Contact",
                 style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
@@ -141,13 +141,13 @@ class _SelectContactState extends State<SelectContact> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (builder) => CreateGroup()));
                 },
-                child: ButtonCard(
+                child: const ButtonCard(
                   icon: Icons.group,
                   name: "New group",
                 ),
               );
             } else if (index == 1) {
-              return ButtonCard(
+              return const ButtonCard(
                 icon: Icons.person_add,
                 name: "New contact",
               );

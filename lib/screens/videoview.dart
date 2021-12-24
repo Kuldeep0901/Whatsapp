@@ -60,12 +60,12 @@ class _VideoViewPageState extends State<VideoViewPage> {
           ),
         ],
       ),
-      body: Container(
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
-            Container(
+            SizedBox(
                 height: MediaQuery.of(context).size.height - 150,
                 width: MediaQuery.of(context).size.width,
                 child: _controller.value.isInitialized

@@ -1,10 +1,7 @@
-import 'dart:ffi';
 import 'dart:math';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:whatsapp/screens/cameraview.dart';
 import 'package:whatsapp/screens/videoview.dart';
 
@@ -27,7 +24,6 @@ class _CameraScreenState extends State<CameraScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _cameraController = CameraController(cameras[0], ResolutionPreset.high);
     cameravalue = _cameraController.initialize();
   }
@@ -47,7 +43,7 @@ class _CameraScreenState extends State<CameraScreen> {
               future: cameravalue,
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.done) {
-                  return Container(
+                  return SizedBox(
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height,
                       child: CameraPreview(_cameraController));

@@ -1,8 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp/screens/homescreen.dart';
+import 'package:whatsapp/newscreen/landingscreen.dart';
 import 'package:whatsapp/screens/camerascreen.dart';
-import 'package:whatsapp/screens/loginscreen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,9 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           fontFamily: "OpenSans",
-          primaryColor: Color(0xFF075E54),
-          accentColor: Color(0xFF128C7E)),
-      home: LoginScreen(),
+          primaryColor: const Color(0xFF075E54),
+          colorScheme: ColorScheme.fromSwatch()
+              .copyWith(secondary: const Color(0xFF128C7E))),
+      home: const LandingScreen(),
     );
   }
 }

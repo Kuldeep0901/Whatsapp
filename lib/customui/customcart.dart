@@ -45,7 +45,7 @@ class CustomCart extends StatelessWidget {
               subtitle: Row(
                 children: [
                   const Icon(Icons.done_all),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Text(chatModel.currentMessage,
